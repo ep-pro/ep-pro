@@ -1,0 +1,9 @@
+{
+  "prettier.enable": true,
+  "eslint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "cSpell.allowCompoundWords": true,
+  "cSpell.words": ["dimm", "execa", "lcov", "tsup", "unplugin", "vitepress", "vitesse", "vueuse"]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "playground",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "play": "vite"
+  },
+  "dependencies": {
+    "@unocss/reset": "0.59.3",
+    "vue": "^3.4.23"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "unocss": "^0.59.3",
+    "vite": "^5.2.9"
+  }
+}

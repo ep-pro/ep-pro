@@ -1,0 +1,14 @@
+{
+  "name": "docs",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "vitepress build .",
+    "dev": "vitepress dev ."
+  },
+  "devDependencies": {
+    "markdown-it-vitepress-demo": "^0.1.11",
+    "vitepress": "^1.1.0",
+    "vue": "^3.4.23"
+  }
+}
