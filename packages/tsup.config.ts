@@ -9,6 +9,7 @@ export function defineBuildConfig(options: Options = {}) {
     clean: true,
     target: ['es2022', 'node18'],
     external: ['vue', '@vueuse/core', 'element-plus', 'dayjs'],
+    tsconfig: '../../tsconfig.json',
     ...options,
   })
 }

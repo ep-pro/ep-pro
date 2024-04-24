@@ -1,6 +1,7 @@
 {
   "prettier.enable": true,
   "eslint.enable": true,
+  "eslint.experimental.useFlatConfig": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },

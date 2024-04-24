@@ -2,42 +2,7 @@
   "name": "@ep-pro/components",
   "type": "module",
   "version": "0.0.0",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      },
-      "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
-      }
-    },
-    "./resolver": {
-      "import": {
-        "types": "./dist/resolver.d.ts",
-        "default": "./dist/resolver.js"
-      },
-      "require": {
-        "types": "./dist/resolver.d.cts",
-        "default": "./dist/resolver.cjs"
-      }
-    },
-    "./imports": {
-      "import": {
-        "types": "./dist/imports.d.ts",
-        "default": "./dist/imports.js"
-      },
-      "require": {
-        "types": "./dist/imports.d.cts",
-        "default": "./dist/imports.cjs"
-      }
-    }
-  },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./src/index.ts",
   "files": [
     "dist"
   ],
@@ -46,11 +11,50 @@
     "dev": "tsup --watch src"
   },
   "publishConfig": {
+    "exports": {
+      "./package.json": "./package.json",
+      ".": {
+        "import": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "require": {
+          "types": "./dist/index.d.cts",
+          "default": "./dist/index.cjs"
+        }
+      },
+      "./resolver": {
+        "import": {
+          "types": "./dist/resolver.d.ts",
+          "default": "./dist/resolver.js"
+        },
+        "require": {
+          "types": "./dist/resolver.d.cts",
+          "default": "./dist/resolver.cjs"
+        }
+      },
+      "./imports": {
+        "import": {
+          "types": "./dist/imports.d.ts",
+          "default": "./dist/imports.js"
+        },
+        "require": {
+          "types": "./dist/imports.d.cts",
+          "default": "./dist/imports.cjs"
+        }
+      }
+    },
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
     "access": "public"
   },
   "dependencies": {
-    "element-plus": "^2.7.0",
-    "vue": "^3.4.23"
+    "@ep-pro/form": "workspace:*",
+    "@ep-pro/table": "workspace:*",
+    "@vueuse/core": "^10.9.0",
+    "element-plus": "^2.7.1",
+    "vue": "^3.4.25"
   },
   "devDependencies": {
     "unplugin-auto-import": "^0.17.5",

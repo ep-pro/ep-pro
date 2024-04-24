@@ -1,5 +1,5 @@
 {
-  "name": "@ep-pro/utils",
+  "name": "@ep-pro/form",
   "type": "module",
   "version": "0.0.0",
   "main": "./src/index.ts",
@@ -29,5 +29,9 @@
     "types": "./dist/index.d.ts",
     "access": "public"
   },
-  "devDependencies": {}
+  "dependencies": {
+    "@vueuse/core": "^10.9.0",
+    "element-plus": "^2.7.1",
+    "vue": "^3.4.25"
+  }
 }

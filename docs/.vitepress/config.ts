@@ -1,5 +1,6 @@
-import { DefaultTheme, defineConfig } from 'vitepress'
+import { defineConfig } from 'vitepress'
 import mdItDemo from 'markdown-it-vitepress-demo'
+import type { DefaultTheme } from 'vitepress'
 
 export default defineConfig({
   title: 'ElementPlus Pro Components',
