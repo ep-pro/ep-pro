@@ -30,8 +30,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@vueuse/core": "^10.9.0",
-    "element-plus": "^2.7.1",
-    "vue": "^3.4.25"
+    "@vueuse/core": "^10.11.0",
+    "element-plus": "^2.7.8",
+    "vue": "^3.4.35"
   }
 }

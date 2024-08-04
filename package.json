@@ -2,7 +2,7 @@
   "name": "@ep-pro/ep-pro",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.0.6",
+  "packageManager": "pnpm@9.6.0",
   "license": "MIT",
   "author": {
     "name": "ntnyq",
@@ -24,28 +24,26 @@
   "devDependencies": {
     "@changesets/changelog-github": "0.5.0",
     "@changesets/cli": "2.27.1",
-    "@ntnyq/eslint-config": "^2.0.1",
+    "@ntnyq/eslint-config": "^2.8.0",
     "@ntnyq/prettier-config": "^1.21.2",
-    "@types/fs-extra": "^11.0.4",
-    "@types/node": "^20.12.7",
-    "@vitest/coverage-v8": "^1.5.1",
-    "eslint": "^9.1.1",
-    "execa": "^8.0.1",
-    "fs-extra": "^11.2.0",
-    "husky": "^9.0.11",
+    "@types/node": "^22.1.0",
+    "@vitest/coverage-v8": "^2.0.5",
+    "eslint": "^9.8.0",
+    "execa": "^9.3.0",
+    "husky": "^9.1.4",
     "nano-staged": "^0.8.0",
-    "npm-run-all2": "^6.1.2",
-    "prettier": "^3.2.5",
-    "rimraf": "^5.0.5",
-    "tsup": "^8.0.2",
-    "tsx": "^4.7.2",
-    "typescript": "^5.4.5",
-    "unocss": "^0.59.4",
-    "vite": "^5.2.10",
-    "vitest": "^1.5.1"
+    "npm-run-all2": "^6.2.2",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.2.4",
+    "tsx": "^4.16.5",
+    "typescript": "^5.5.4",
+    "unocss": "^0.61.9",
+    "vite": "^5.3.5",
+    "vitest": "^2.0.5"
   },
   "prettier": "@ntnyq/prettier-config",
   "nano-staged": {
-    "*.{js,ts,mjs,md,json,yml,yaml}": "eslint --fix"
+    "*.{js,ts,cjs,mjs,vue,md,json,yml,yaml}": "eslint --fix"
   }
 }
