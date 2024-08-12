@@ -52,12 +52,12 @@
   "dependencies": {
     "@ep-pro/form": "workspace:*",
     "@ep-pro/table": "workspace:*",
-    "@vueuse/core": "^10.11.0",
-    "element-plus": "^2.7.8",
-    "vue": "^3.4.35"
+    "@vueuse/core": "catalog:",
+    "element-plus": "catalog:",
+    "vue": "catalog:"
   },
   "devDependencies": {
     "unplugin-auto-import": "^0.18.2",
-    "unplugin-vue-components": "^0.27.3"
+    "unplugin-vue-components": "^0.27.4"
   }
 }

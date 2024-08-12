@@ -1,3 +1,10 @@
+# eslint yml/sort-keys: error
+
+catalog:
+  '@vueuse/core': ^10.11.1
+  element-plus: ^2.8.0
+  vue: ^3.4.37
+
 packages:
   - docs
   - playground
