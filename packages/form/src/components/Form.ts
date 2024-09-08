@@ -1,8 +1,8 @@
 import { defineComponent } from 'vue'
 import type { SlotsType } from 'vue'
 
-export const EpProForm = defineComponent({
-  name: 'EpProForm',
+export const EpForm = defineComponent({
+  name: 'EpForm',
 
   props: {},
 

@@ -1,5 +1,5 @@
-import { EpProTable } from './components'
+import { EpTable } from './components'
 
 export * from './components'
 
-export default EpProTable
+export default EpTable

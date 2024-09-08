@@ -15,6 +15,16 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["./docs", "./packages", "./playground", "./scripts", "./tests", "./*.config.ts"],
+  "include": [
+    "./docs/**/*.ts",
+    "./docs/**/*.vue",
+    "./docs/.vitepress/**/*.ts",
+    "./docs/.vitepress/**/*.vue",
+    "./packages/**/*.ts",
+    "./packages/**/*.tsx",
+    "./scripts/**/*.ts",
+    "./tests/**/*.ts",
+    "./*.config.ts"
+  ],
   "exclude": ["**/dist/**"]
 }

@@ -7,16 +7,15 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch src"
+    "build": "unbuild"
   },
   "publishConfig": {
     "exports": {
       "./package.json": "./package.json",
       ".": {
         "import": {
-          "types": "./dist/index.d.ts",
-          "default": "./dist/index.js"
+          "types": "./dist/index.d.mts",
+          "default": "./dist/index.mjs"
         },
         "require": {
           "types": "./dist/index.d.cts",
@@ -24,8 +23,8 @@
         }
       }
     },
-    "main": "./dist/index.js",
-    "module": "./dist/index.js",
+    "main": "./dist/index.mjs",
+    "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
     "access": "public"
   },

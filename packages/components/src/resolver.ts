@@ -1,10 +1,12 @@
 import type { ComponentResolver } from 'unplugin-vue-components/types'
 
-function EpProResolver(): ComponentResolver {
+export function EpProResolver(): ComponentResolver {
   return {
     type: 'component',
-    resolve(name: string) {
-      return { name, from: '@ep-pro/components' }
+    resolve: (name: string) => {
+      if (/^Ep.+/.test(name)) {
+        return { name, from: '@ep-pro/components' }
+      }
     },
   }
 }

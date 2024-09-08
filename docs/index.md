@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: ElementPlus Pro Components
+  name: ElementPlus Pro
   text: EpPro
   actions:
     - theme: brand

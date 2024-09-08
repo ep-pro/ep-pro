@@ -1,5 +1,5 @@
-import { EpProForm } from './components'
+import { EpForm } from './components'
 
 export * from './components'
 
-export default EpProForm
+export default EpForm

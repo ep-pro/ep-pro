@@ -1,6 +1,7 @@
 {
   "prettier.enable": true,
   "eslint.enable": true,
+  "editor.formatOnSave": true,
   "eslint.validate": [
     "vue",
     "yaml",
@@ -19,5 +20,15 @@
     "source.fixAll.eslint": "explicit"
   },
   "cSpell.allowCompoundWords": true,
-  "cSpell.words": ["dimm", "execa", "lcov", "tsup", "unplugin", "vitepress", "vitesse", "vueuse"]
+  "cSpell.words": [
+    "destructurable",
+    "dimm",
+    "execa",
+    "lcov",
+    "nocheck",
+    "unplugin",
+    "vitepress",
+    "vitesse",
+    "vueuse"
+  ]
 }

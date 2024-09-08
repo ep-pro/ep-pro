@@ -1,11 +1,21 @@
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
 import mdItDemo from 'markdown-it-vitepress-demo'
+import UnoCSS from 'unocss/vite'
+import VueJsx from '@vitejs/plugin-vue-jsx'
+import VueComponents from 'unplugin-vue-components/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import type { DefaultTheme } from 'vitepress'
 
-export default defineConfig({
-  title: 'ElementPlus Pro Components',
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const resolve = (...args: string[]) => path.resolve(__dirname, '..', ...args)
 
-  description: 'ElementPlus Pro Components',
+export default defineConfig({
+  title: 'ElementPlus Pro',
+
+  description: 'ElementPlus Pro',
 
   head: [['meta', { name: 'author', content: 'ntnyq' }]],
 
@@ -23,6 +33,37 @@ export default defineConfig({
     ssr: {
       noExternal: ['element-plus'],
     },
+
+    define: {
+      __VERSION__: JSON.stringify('0.0.0'),
+    },
+
+    plugins: [
+      VueJsx(),
+
+      UnoCSS(),
+
+      VueComponents({
+        dts: resolve('components.d.ts'),
+        resolvers: [
+          ElementPlusResolver(),
+          {
+            type: 'component',
+            resolve: name => {
+              if (name.startsWith('Ep')) {
+                return { name, from: '@ep-pro/components' }
+              }
+            },
+          },
+        ],
+      }),
+
+      AutoImport({
+        dts: resolve('auto-imports.d.ts'),
+        imports: ['vue', '@vueuse/core'],
+        resolvers: [ElementPlusResolver()],
+      }),
+    ],
   },
 
   locales: {
@@ -42,11 +83,17 @@ export default defineConfig({
 export function defineThemeConfig(locale = 'en-US') {
   const prefix = (locale = locale === 'en-US' ? '/' : `/${locale}/`)
 
+  const componentsNavOrSidebar = {
+    text: 'Components',
+    items: [{ text: 'Description', link: `${prefix}components/description/` }],
+  }
+
   // https://vitepress.dev/reference/default-theme-config
   const themeConfig: DefaultTheme.Config = {
     nav: [
       { text: 'Home', link: prefix },
       { text: 'Docs', link: `${prefix}docs/intro` },
+      componentsNavOrSidebar,
     ],
 
     sidebar: [
@@ -58,6 +105,7 @@ export function defineThemeConfig(locale = 'en-US') {
           { text: 'FAQ', link: `${prefix}docs/faq` },
         ],
       },
+      componentsNavOrSidebar,
     ],
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/ep-pro/ep-pro' }],

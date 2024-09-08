@@ -1,5 +1,5 @@
 {
-  "name": "@ep-pro/form",
+  "name": "@ep-pro/description",
   "type": "module",
   "version": "0.0.0",
   "main": "./src/index.ts",

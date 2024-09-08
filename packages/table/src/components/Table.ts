@@ -1,8 +1,8 @@
 import { defineComponent } from 'vue'
 import type { SlotsType } from 'vue'
 
-export const EpProTable = defineComponent({
-  name: 'EpProTable',
+export const EpTable = defineComponent({
+  name: 'EpTable',
 
   props: {},
 
