@@ -85,7 +85,7 @@ export function defineThemeConfig(locale = 'en-US') {
 
   const componentsNavOrSidebar = {
     text: 'Components',
-    items: [{ text: 'Description', link: `${prefix}components/description/` }],
+    items: [{ text: 'Descriptions', link: `${prefix}components/descriptions/` }],
   }
 
   // https://vitepress.dev/reference/default-theme-config

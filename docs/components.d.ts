@@ -10,5 +10,6 @@ declare module 'vue' {
     ElCard: typeof import('element-plus/es')['ElCard']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     EpDescription: typeof import('@ep-pro/components')['EpDescription']
+    EpDescriptions: typeof import('@ep-pro/components')['EpDescriptions']
   }
 }

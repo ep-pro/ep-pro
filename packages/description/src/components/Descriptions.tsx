@@ -24,8 +24,8 @@ export const epDescriptionProps = {
 
 export type EpDescriptionProps = ExtractPropTypes<typeof epDescriptionProps>
 
-export const EpDescription = defineComponent({
-  name: 'EpDescription',
+export const EpDescriptions = defineComponent({
+  name: 'EpDescriptions',
 
   props: epDescriptionProps,
 

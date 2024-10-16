@@ -1,5 +1,5 @@
-import { EpDescription } from './components'
+import { EpDescriptions } from './components'
 
 export * from './components'
 
-export default EpDescription
+export default EpDescriptions

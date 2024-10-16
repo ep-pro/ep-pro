@@ -1,4 +1,4 @@
-# EpDescription
+# EpDescriptions
 
 ## Props
 

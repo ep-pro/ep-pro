@@ -1,1 +1,1 @@
-# @ep-pro/description
+# @ep-pro/descriptions

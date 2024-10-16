@@ -32,7 +32,7 @@ const items = ref<Partial<EpDescriptionItemProps>[]>([
 </script>
 
 <template>
-  <EpDescription
+  <EpDescriptions
     :items="items"
     :column="2"
     label-class-name="w-100px"
