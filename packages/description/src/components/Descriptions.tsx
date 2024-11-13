@@ -1,11 +1,11 @@
-import { computed, defineComponent } from 'vue'
 import { reactiveOmit } from '@vueuse/core'
 import {
-  ElDescriptions,
-  ElDescriptionsItem,
   descriptionItemProps,
   descriptionProps,
+  ElDescriptions,
+  ElDescriptionsItem,
 } from 'element-plus'
+import { computed, defineComponent } from 'vue'
 import type { ExtractPropTypes, PropType } from 'vue'
 
 export const epDescriptionItemProps = {

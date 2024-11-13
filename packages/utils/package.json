@@ -6,9 +6,6 @@
   "files": [
     "dist"
   ],
-  "scripts": {
-    "build": "unbuild"
-  },
   "publishConfig": {
     "exports": {
       "./package.json": "./package.json",
@@ -27,6 +24,9 @@
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
     "access": "public"
+  },
+  "scripts": {
+    "build": "unbuild"
   },
   "devDependencies": {}
 }

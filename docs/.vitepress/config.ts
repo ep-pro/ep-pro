@@ -1,12 +1,12 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { defineConfig } from 'vitepress'
+import VueJsx from '@vitejs/plugin-vue-jsx'
 import mdItDemo from 'markdown-it-vitepress-demo'
 import UnoCSS from 'unocss/vite'
-import VueJsx from '@vitejs/plugin-vue-jsx'
-import VueComponents from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import VueComponents from 'unplugin-vue-components/vite'
+import { defineConfig } from 'vitepress'
 import type { DefaultTheme } from 'vitepress'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))

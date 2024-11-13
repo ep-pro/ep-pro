@@ -7,8 +7,8 @@
 import 'uno.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import './style.css'
-import { defineComponent, h } from 'vue'
 import Theme from 'vitepress/theme'
+import { defineComponent, h } from 'vue'
 import EpDemoContainer from './components/EpDemoContainer/index.vue'
 import type { Theme as ITheme } from 'vitepress/client'
 

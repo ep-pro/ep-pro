@@ -1,6 +1,6 @@
+import { EpDescriptions } from '@ep-pro/descriptions'
 import { EpForm } from '@ep-pro/form'
 import { EpTable } from '@ep-pro/table'
-import { EpDescriptions } from '@ep-pro/descriptions'
 import type { App, Plugin } from 'vue'
 
 function install(app: App) {
