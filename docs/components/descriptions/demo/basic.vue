@@ -26,7 +26,8 @@ const items = ref<Partial<EpDescriptionItemProps>[]>([
   {
     label: 'Address',
     // cspell: disable-next-line
-    content: 'No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province',
+    content:
+      'No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province',
   },
 ])
 </script>

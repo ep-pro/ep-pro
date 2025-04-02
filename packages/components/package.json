@@ -7,6 +7,8 @@
     "dist"
   ],
   "publishConfig": {
+    "types": "./dist/index.d.ts",
+    "access": "public",
     "exports": {
       "./package.json": "./package.json",
       ".": {
@@ -19,16 +21,6 @@
           "default": "./dist/index.cjs"
         }
       },
-      "./resolver": {
-        "import": {
-          "types": "./dist/resolver.d.mts",
-          "default": "./dist/resolver.mjs"
-        },
-        "require": {
-          "types": "./dist/resolver.d.cts",
-          "default": "./dist/resolver.cjs"
-        }
-      },
       "./imports": {
         "import": {
           "types": "./dist/imports.d.mts",
@@ -38,12 +30,20 @@
           "types": "./dist/imports.d.cts",
           "default": "./dist/imports.cjs"
         }
+      },
+      "./resolver": {
+        "import": {
+          "types": "./dist/resolver.d.mts",
+          "default": "./dist/resolver.mjs"
+        },
+        "require": {
+          "types": "./dist/resolver.d.cts",
+          "default": "./dist/resolver.cjs"
+        }
       }
     },
     "main": "./dist/index.mjs",
-    "module": "./dist/index.mjs",
-    "types": "./dist/index.d.ts",
-    "access": "public"
+    "module": "./dist/index.mjs"
   },
   "scripts": {
     "build": "unbuild"
@@ -57,7 +57,7 @@
     "vue": "catalog:"
   },
   "devDependencies": {
-    "unplugin-auto-import": "^0.18.3",
-    "unplugin-vue-components": "^0.27.4"
+    "unplugin-auto-import": "^19.1.2",
+    "unplugin-vue-components": "^28.4.1"
   }
 }

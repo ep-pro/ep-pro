@@ -7,6 +7,8 @@
     "dist"
   ],
   "publishConfig": {
+    "types": "./dist/index.d.ts",
+    "access": "public",
     "exports": {
       "./package.json": "./package.json",
       ".": {
@@ -21,9 +23,7 @@
       }
     },
     "main": "./dist/index.mjs",
-    "module": "./dist/index.mjs",
-    "types": "./dist/index.d.ts",
-    "access": "public"
+    "module": "./dist/index.mjs"
   },
   "scripts": {
     "build": "unbuild"

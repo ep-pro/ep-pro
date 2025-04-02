@@ -9,8 +9,12 @@
     "baseUrl": ".",
     "types": ["node"],
     "resolveJsonModule": true,
+    "erasableSyntaxOnly": true,
+    "libReplacement": false,
     "outDir": "dist",
     "downlevelIteration": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true

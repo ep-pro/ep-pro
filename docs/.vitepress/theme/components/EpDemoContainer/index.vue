@@ -2,11 +2,11 @@
 import Container from './Container.vue'
 
 const props = defineProps<{
-  sfcTsCode: string
+  tsCode: string
   // if using ts, sfcJsCode will transform the to js
-  sfcJsCode: string
-  sfcTsHtml: string
-  sfcJsHtml: string
+  jsCode: string
+  tsHtml: string
+  jsHtml: string
   title: string
   metadata: Record<string, any>
   expand?: boolean

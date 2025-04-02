@@ -1,6 +1,5 @@
 /**
  * @file VitePress theme configuration
- *
  * @see {@link https://vitepress.dev/guide/custom-theme}
  */
 

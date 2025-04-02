@@ -2,11 +2,11 @@
 import EpContainer from './EpContainer.vue'
 
 const props = defineProps<{
-  sfcTsCode: string
-  // if using ts, sfcJsCode will transform the to js
-  sfcJsCode: string
-  sfcTsHtml: string
-  sfcJsHtml: string
+  tsCode: string
+  // if using ts, tsCode will transform the to js
+  jsCode: string
+  jsHtml: string
+  tsHtml: string
   // descriptionHtml is generally not used since the slot with name="desc" will handle everything
   descriptionHtml?: string
   title: string
@@ -14,19 +14,16 @@ const props = defineProps<{
   expand?: boolean
 }>()
 
-const visible = ref(props.expand ?? false)
+const isUsingTs = computed(() => !!props.tsCode)
+const showHighlighted = ref(props.expand ?? false)
 
-// const sfcTsCode = computed(() => decodeURIComponent(props.sfcTsCode))
-// const sfcJsCode = computed(() => decodeURIComponent(props.sfcJsCode))
-
-const isUsingTs = computed(() => !!props.sfcTsCode)
-
-// const sfcCode = computed(() => (isUsingTs.value ? sfcTsCode.value : sfcJsCode.value))
+// const tsCode = computed(() => decodeURIComponent(props.tsCode))
+// const jsCode = computed(() => decodeURIComponent(props.jsCode))
 
 const showTs = ref(isUsingTs.value)
 
 const highlightedHtml = computed(() =>
-  decodeURIComponent(showTs.value ? props.sfcTsHtml : props.sfcJsHtml),
+  decodeURIComponent(showTs.value ? props.tsHtml : props.jsHtml),
 )
 </script>
 
@@ -37,7 +34,7 @@ const highlightedHtml = computed(() =>
   >
     <slot />
     <template
-      v-if="visible"
+      v-if="showHighlighted"
       #footer
     >
       <div

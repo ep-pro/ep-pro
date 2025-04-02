@@ -13,7 +13,9 @@ export const epDescriptionItemProps = {
   content: String,
 }
 
-export type EpDescriptionItemProps = ExtractPropTypes<typeof epDescriptionItemProps>
+export type EpDescriptionItemProps = ExtractPropTypes<
+  typeof epDescriptionItemProps
+>
 
 export const epDescriptionProps = {
   ...descriptionProps,
@@ -33,7 +35,10 @@ export const EpDescriptions = defineComponent({
     const items = computed(() => props.items || [])
     const rootProps = reactiveOmit(props, ['items'])
 
-    function renderDescriptionItem(item: Partial<EpDescriptionItemProps>, idx: number) {
+    function renderDescriptionItem(
+      item: Partial<EpDescriptionItemProps>,
+      idx: number,
+    ) {
       const { content, className, labelClassName, ...restProps } = item
       return (
         <ElDescriptionsItem
@@ -48,7 +53,9 @@ export const EpDescriptions = defineComponent({
     }
 
     return () => (
-      <ElDescriptions {...rootProps}>{items.value.map(renderDescriptionItem)}</ElDescriptions>
+      <ElDescriptions {...rootProps}>
+        {items.value.map(renderDescriptionItem)}
+      </ElDescriptions>
     )
   },
 })

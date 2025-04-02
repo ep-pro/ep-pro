@@ -1,12 +1,12 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import VueJsx from '@vitejs/plugin-vue-jsx'
-import mdItDemo from 'markdown-it-vitepress-demo'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import VueComponents from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vitepress'
+import { demoMdPlugin } from 'vitepress-plugin-demo'
 import type { DefaultTheme } from 'vitepress'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -21,7 +21,7 @@ export default defineConfig({
 
   markdown: {
     config(md) {
-      md.use(mdItDemo)
+      md.use(demoMdPlugin)
     },
     theme: {
       dark: 'vitesse-dark',
@@ -41,7 +41,9 @@ export default defineConfig({
     plugins: [
       VueJsx(),
 
-      UnoCSS(),
+      UnoCSS({
+        inspector: false,
+      }),
 
       VueComponents({
         dts: resolve('components.d.ts'),
@@ -85,7 +87,9 @@ export function defineThemeConfig(locale = 'en-US') {
 
   const componentsNavOrSidebar = {
     text: 'Components',
-    items: [{ text: 'Descriptions', link: `${prefix}components/descriptions/` }],
+    items: [
+      { text: 'Descriptions', link: `${prefix}components/descriptions/` },
+    ],
   }
 
   // https://vitepress.dev/reference/default-theme-config
