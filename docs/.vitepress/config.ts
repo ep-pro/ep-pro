@@ -1,5 +1,4 @@
 import path from 'node:path'
-import { fileURLToPath } from 'node:url'
 import VueJsx from '@vitejs/plugin-vue-jsx'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -9,8 +8,8 @@ import { defineConfig } from 'vitepress'
 import { demoMdPlugin } from 'vitepress-plugin-demo'
 import type { DefaultTheme } from 'vitepress'
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const resolve = (...args: string[]) => path.resolve(__dirname, '..', ...args)
+const resolve = (...args: string[]) =>
+  path.resolve(import.meta.dirname, '..', ...args)
 
 export default defineConfig({
   title: 'ElementPlus Pro',

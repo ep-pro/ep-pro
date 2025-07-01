@@ -12,52 +12,33 @@
     "exports": {
       "./package.json": "./package.json",
       ".": {
-        "import": {
-          "types": "./dist/index.d.mts",
-          "default": "./dist/index.mjs"
-        },
-        "require": {
-          "types": "./dist/index.d.cts",
-          "default": "./dist/index.cjs"
-        }
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
       },
       "./imports": {
-        "import": {
-          "types": "./dist/imports.d.mts",
-          "default": "./dist/imports.mjs"
-        },
-        "require": {
-          "types": "./dist/imports.d.cts",
-          "default": "./dist/imports.cjs"
-        }
+        "types": "./dist/imports.d.ts",
+        "default": "./dist/imports.js"
       },
       "./resolver": {
-        "import": {
-          "types": "./dist/resolver.d.mts",
-          "default": "./dist/resolver.mjs"
-        },
-        "require": {
-          "types": "./dist/resolver.d.cts",
-          "default": "./dist/resolver.cjs"
-        }
+        "types": "./dist/resolver.d.ts",
+        "default": "./dist/resolver.js"
       }
     },
-    "main": "./dist/index.mjs",
-    "module": "./dist/index.mjs"
+    "main": "./dist/index.js"
   },
   "scripts": {
-    "build": "unbuild"
+    "build": "tsdown"
   },
   "dependencies": {
     "@ep-pro/descriptions": "workspace:*",
     "@ep-pro/form": "workspace:*",
     "@ep-pro/table": "workspace:*",
-    "@vueuse/core": "catalog:",
-    "element-plus": "catalog:",
-    "vue": "catalog:"
+    "@vueuse/core": "^13.9.0",
+    "element-plus": "^2.11.4",
+    "vue": "^3.5.22"
   },
   "devDependencies": {
-    "unplugin-auto-import": "^19.1.2",
-    "unplugin-vue-components": "^28.4.1"
+    "unplugin-auto-import": "^20.2.0",
+    "unplugin-vue-components": "^29.1.0"
   }
 }

@@ -34,7 +34,7 @@ const items = ref<Partial<EpDescriptionItemProps>[]>([
 
 <template>
   <EpDescriptions
-    :items="items"
+    :items
     :column="2"
     label-class-name="w-100px"
     class-name="min-w-300px"

@@ -29,7 +29,7 @@ const highlightedHtml = computed(() =>
 
 <template>
   <EpContainer
-    :title="title"
+    :title
     :id="metadata.fileName"
   >
     <slot />
