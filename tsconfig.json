@@ -1,22 +1,15 @@
 {
+  "extends": "@ntnyq/tsconfig/strict.json",
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["DOM", "ES2022"],
+    "lib": ["DOM", "ES2023"],
     "jsx": "preserve",
     "jsxImportSource": "vue",
     "module": "ESNext",
-    "moduleResolution": "Bundler",
     "baseUrl": ".",
     "types": ["node"],
-    "resolveJsonModule": true,
-    "erasableSyntaxOnly": true,
-    "libReplacement": false,
     "outDir": "dist",
-    "downlevelIteration": true,
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
     "esModuleInterop": true,
-    "strict": true,
     "skipLibCheck": true
   },
   "include": [

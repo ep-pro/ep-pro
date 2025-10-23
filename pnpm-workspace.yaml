@@ -1,15 +1,12 @@
 packages:
   - docs
   - packages/*
-
 overrides:
-  esbuild: ^0.25.10
-
+  esbuild: ^0.27.2
 onlyBuiltDependencies:
   - esbuild
   - unrs-resolver
   - vue-demi
-
 peerDependencyRules:
   ignoreMissing:
     - '@algolia/client-search'

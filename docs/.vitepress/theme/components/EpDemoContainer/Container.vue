@@ -2,11 +2,11 @@
 import EpContainer from './EpContainer.vue'
 
 const props = defineProps<{
-  tsCode: string
-  // if using ts, tsCode will transform the to js
-  jsCode: string
-  jsHtml: string
-  tsHtml: string
+  typescript: string
+  // if using ts, typescript will transform the to js
+  javascript: string
+  typescriptHtml: string
+  javascriptHtml: string
   // descriptionHtml is generally not used since the slot with name="desc" will handle everything
   descriptionHtml?: string
   title: string
@@ -14,7 +14,7 @@ const props = defineProps<{
   expand?: boolean
 }>()
 
-const isUsingTs = computed(() => !!props.tsCode)
+const isUsingTs = computed(() => !!props.typescript)
 const showHighlighted = ref(props.expand ?? false)
 
 // const tsCode = computed(() => decodeURIComponent(props.tsCode))
@@ -23,7 +23,9 @@ const showHighlighted = ref(props.expand ?? false)
 const showTs = ref(isUsingTs.value)
 
 const highlightedHtml = computed(() =>
-  decodeURIComponent(showTs.value ? props.tsHtml : props.jsHtml),
+  decodeURIComponent(
+    showTs.value ? props.typescriptHtml : props.javascriptHtml,
+  ),
 )
 </script>
 

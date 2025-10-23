@@ -5,6 +5,7 @@ export default defineConfig({
   clean: true,
   dts: true,
   entry: ['src/index.ts', 'src/imports.ts', 'src/resolver.ts'],
+  platform: 'browser',
   define: {
     __VERSION__: JSON.stringify(pkg.version),
   },
