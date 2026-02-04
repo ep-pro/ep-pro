@@ -6,9 +6,9 @@
     "jsx": "preserve",
     "jsxImportSource": "vue",
     "module": "ESNext",
-    "baseUrl": ".",
     "types": ["node"],
     "outDir": "dist",
+    "exactOptionalPropertyTypes": false,
     "esModuleInterop": true,
     "skipLibCheck": true
   },

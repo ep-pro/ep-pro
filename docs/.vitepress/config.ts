@@ -50,10 +50,11 @@ export default defineConfig({
           ElementPlusResolver(),
           {
             type: 'component',
-            resolve: name => {
+            resolve(name: string) {
               if (name.startsWith('Ep')) {
                 return { name, from: '@ep-pro/components' }
               }
+              return undefined
             },
           },
         ],

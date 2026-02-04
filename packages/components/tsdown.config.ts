@@ -16,5 +16,7 @@ export default defineConfig({
     'element-plus',
     'unplugin-auto-import',
     'unplugin-vue-components',
+    'unplugin-auto-import/types',
+    'unplugin-vue-components/types',
   ],
 })

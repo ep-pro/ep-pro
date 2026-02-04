@@ -1,39 +1,24 @@
 import { reactiveOmit } from '@vueuse/core'
-import {
-  descriptionItemProps,
-  descriptionProps,
-  ElDescriptions,
-  ElDescriptionsItem,
-} from 'element-plus'
+import { ElDescriptions, ElDescriptionsItem } from 'element-plus'
 import { computed, defineComponent } from 'vue'
-import type { ExtractPropTypes, PropType } from 'vue'
+import type { DescriptionItemProps, DescriptionProps } from 'element-plus'
 
-export const epDescriptionItemProps = {
-  ...descriptionItemProps,
-  content: String,
+export type EpDescriptionItemProps = Partial<DescriptionItemProps> & {
+  content?: string
 }
 
-export type EpDescriptionItemProps = ExtractPropTypes<
-  typeof epDescriptionItemProps
->
-
-export const epDescriptionProps = {
-  ...descriptionProps,
-  items: Array as PropType<Partial<EpDescriptionItemProps>[]>,
-  labelClassName: epDescriptionItemProps.labelClassName,
-  className: epDescriptionItemProps.className,
+export type EpDescriptionProps = Partial<DescriptionProps> & {
+  items?: Partial<EpDescriptionItemProps>[]
+  labelClassName?: string
+  className?: string
 }
 
-export type EpDescriptionProps = ExtractPropTypes<typeof epDescriptionProps>
-
-export const EpDescriptions = defineComponent({
+export const EpDescriptions = defineComponent<EpDescriptionProps>({
   name: 'EpDescriptions',
-
-  props: epDescriptionProps,
 
   setup(props) {
     const items = computed(() => props.items || [])
-    const rootProps = reactiveOmit(props, ['items'])
+    const rootProps = reactiveOmit(props, ['items']) as any
 
     function renderDescriptionItem(
       item: Partial<EpDescriptionItemProps>,
@@ -43,8 +28,8 @@ export const EpDescriptions = defineComponent({
       return (
         <ElDescriptionsItem
           key={idx}
-          className={className || rootProps.className}
-          labelClassName={labelClassName || rootProps.labelClassName}
+          className={className ?? rootProps.className}
+          labelClassName={labelClassName ?? rootProps.labelClassName}
           {...restProps}
         >
           {content}

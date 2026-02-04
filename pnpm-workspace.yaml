@@ -2,6 +2,7 @@ packages:
   - docs
   - packages/*
 overrides:
+  vite: ^8.0.0-beta.12
   esbuild: ^0.27.2
 onlyBuiltDependencies:
   - esbuild
